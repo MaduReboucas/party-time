@@ -1,9 +1,4 @@
-const express = require("express");
+const router = require("express").Router();
 
-const router = express.Router();
-
-router.get("/health", (req, res) => {
-  res.json({ ok: true });
-});
-
-module.exports = router;
+// Services router
+const servicesRouter = require("./services");
