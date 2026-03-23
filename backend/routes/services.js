@@ -2,8 +2,10 @@ const router = require("express").Router();
 
 const serviceController = require("../controllers/serviceController");
 
-// Funcoes
+// Funções
 
 router.route("/").post((req, res) => serviceController.create(req, res));
+
+router.route("/services").get((req, res) => serviceController.getAll(req, res));
 
 module.exports = router;
