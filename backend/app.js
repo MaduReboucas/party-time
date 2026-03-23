@@ -6,6 +6,11 @@ app.use(cors());
 
 app.use(express.json());
 
+// Basic health check
+app.get("/", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 // DB Connection
 const conn = require("./db/conn");
 
