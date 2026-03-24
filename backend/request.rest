@@ -59,4 +59,15 @@ GET http://localhost:3000/api/parties/63939be4c4ab483878b0f80f
 
 ###
 DELETE http://localhost:3000/api/parties/63939be4c4ab483878b0f80f
- 
+
+###
+PUT http://localhost:3000/api/parties/63939be4c4ab483878b0f80f
+Content-Type: application/json
+
+{
+    "title": "Meu evento 2",
+    "author": "Matheus",
+    "description": "Uma festa de aniversário",
+    "budget": 9000,
+    "services": ["63937a6929b37d5f01064c19"]
+}
