@@ -16,3 +16,13 @@ GET http://localhost:3000/api/services/63937bd13b8bae81ab9c6b6d
 
 ###
 DELETE http://localhost:3000/api/services/63937bd13b8bae81ab9c6b6d
+
+###
+PUT http://localhost:3000/api/services/63937bfec4263b463389ec4f
+Content-Type: application/json
+
+{
+    "name": "ATUALIZADO",
+    "description": "Muito bom",
+    "price": 199.90
+}
