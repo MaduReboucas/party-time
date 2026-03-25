@@ -33,6 +33,9 @@ const Home = () => {
           <div className="party" key={party._id}>
             <img src={party.image} alt={party.title} />
             <h3>{party.title}</h3>
+            <Link to={`/party/${party._id}`} className="btn-secondary">
+              Detalhes
+            </Link>
           </div>
         ))}
       </div>
