@@ -97,7 +97,7 @@ const partyController = {
         return;
       }
 
-      const updateParty = await PartyModel.findByIdAndUpdate(is, party);
+      const updateParty = await PartyModel.findByIdAndUpdate(id, party);
 
       if (!updateParty) {
         res.status(404).json({ msg: "Festa não encontrada." });

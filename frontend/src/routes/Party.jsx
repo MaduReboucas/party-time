@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import { useParams, Link, useNavigate } from "react-router-dom";
 
-import useToast from "../hook/useToast";
+import toastMessage from "../hook/useToast";
 
 import "./Party.css";
 
@@ -35,7 +35,7 @@ const Party = () => {
     if (res.status === 200) {
       navigate("/");
 
-      useToast(res.data.msg);
+      toastMessage(res.data.msg);
     }
   };
 

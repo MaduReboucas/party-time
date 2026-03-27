@@ -14,6 +14,6 @@ router
 
 router
   .route("/parties/:id")
-  .put((req, res) => partyControllers.update(res, res));
+  .put((req, res) => partyController.update(req, res));
 
 module.exports = router;

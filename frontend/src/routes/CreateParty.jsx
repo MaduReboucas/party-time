@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import useToast from "../hook/useToast";
+import toastMessage from "../hook/useToast";
 
 import "./Form.css";
 
@@ -68,10 +68,10 @@ const CreateParty = () => {
       if (res.status === 201) {
         navigate("/");
 
-        useToast(res.data.msg);
+        toastMessage(res.data.msg);
       }
     } catch (error) {
-      useToast(error.response.data.msg, "error");
+      toastMessage(error.response.data.msg, "error");
     }
   };
 

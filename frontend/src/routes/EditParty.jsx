@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import { useParams, useNavigate } from "react-router-dom";
 
-import useToast from "../hook/useToast";
+import toastMessage from "../hook/useToast";
 
 import "./Form.css";
 
@@ -63,15 +63,13 @@ const EditParty = () => {
     try {
       const res = await partyFetch.put(`/parties/${party._id}`, party);
 
-      console.log(res.data.msg);
-
       if (res.status === 200) {
         navigate(`/party/${id}`);
 
-        useToast(res.data.msg);
+        toastMessage(res.data.msg);
       }
-    } catch (err) {
-      useToast(err.response.data.msg, "error");
+    } catch (error) {
+      toastMessage(error.response.data.msg, "error");
     }
   };
 
@@ -79,7 +77,7 @@ const EditParty = () => {
 
   return (
     <div className="form-page">
-      <h2>Editano: {party.title}</h2>
+      <h2>Editando: {party.title}</h2>
       <p>Ajuste as informações da sua festa</p>
       <form onSubmit={(e) => updateParty(e)}>
         <label>
